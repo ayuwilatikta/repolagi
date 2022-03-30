@@ -1,0 +1,493 @@
+*{
+	line-height: 20px;
+	font-size: 15px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+html {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	/* memberikan efek smot ketika discrol */
+}
+body{
+	margin: 0px;
+	padding: 0px;
+}
+.layar-dalam{
+	max-width: 1000px;
+	margin:auto;
+}
+.layar-penuh {
+	width: 100%;
+	min-height: 200px;
+}
+nav {
+	z-index: 100;
+	color: white;
+	text-align: center;
+	position: fixed;
+	line-height: 30px;
+	width: 100%;
+	transition: background-color 0.5s ease;
+	/* buat efek heder */
+}
+nav.putih {
+	background-color: white;
+}
+nav .logo {
+	
+	float: left;
+	width: 300px;
+	height: auto;
+	cursor: pointer;
+}
+nav .logo img {
+	vertical-align: middle;
+	width: 80px;
+}
+
+nav .menu {
+	float: right;
+	height: 60px;
+	max-width: 600px;
+}
+nav .menu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav .menu ul li {
+	list-style: none;
+	float: left;
+	line-height: 60px;
+}
+
+nav ul li a{
+	color: white;
+	text-align: center;
+	padding: 0px 16px 0px 16px;
+	text-decoration: none;
+}
+nav ul li .search-icon{
+	height: 40px;
+	width: 240px;
+	font-size: 10px;
+	display: flex;
+	background: white;
+	border-radius: 5px;
+}
+
+nav ul li a:hover{
+	background-color: #E4652F;
+	color: whitesmoke;
+}
+nav ul li.active a{
+	background-color: #E4652F;
+	color: whitesmoke;
+}
+p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+.icon-list {
+    width: 50%;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.icon{
+    width: 210px;
+    margin: 0 auto;
+}
+
+.icon img {
+    width: 80%;
+    border-radius: 100%;
+}
+
+.icon p {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center;
+}
+
+header {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	z-index: 2;
+}
+header video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	z-index: -2;
+	width: 100%;
+}
+header .intro {
+	z-index: 100;
+	color: #f0c8a8;
+	text-align: center;
+	position: relative;
+	top: 50%;
+}
+@font-face {
+	font-family: 'Idap';
+	src: url('font/Idap.ttf');
+}
+header .intro h3 {
+	font-family: 'Idap';
+	font-size: 100px;
+	margin: 0;
+	padding: 0;
+}
+header .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.3;
+	z-index: -1;
+}
+.tombol-menu {
+	position:absolute;
+	top: 1.7rem;
+	right: 1rem;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 20px;
+}
+.tombol-menu .garis {
+	height: 3px;
+	background-color: white;
+}
+@media screen and (max-width: 991.98px){
+	.layar-dalam {
+		width: 90%;
+	}
+	nav .menu ul {
+		display: none;
+		margin-top: 60px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	nav .menu ul li {
+		width: 100%;
+		border-bottom: 1px solid rgb(251, 234, 234);
+		background-color: white;
+		line-height: 40px;
+	}
+	nav .menu ul li a {
+		color: #333;
+	}
+	.tombol-menu{
+		display: flex;
+	}
+}
+
+section h3{
+	font-size: 30px;
+}
+/* bayangan */
+section h3::after{
+	content: "";
+	border-bottom: 5px solid #c86b85;
+	width: 52px;
+	display: block;
+	margin: 20px auto;
+}
+/* kalo id pake pagar jgn lupa */
+#aboutus{
+	text-align: center;
+}
+section p.ringkasan{
+	font-size: italic;
+	font-size: 18px;
+	color: thistle;
+}
+section .konten-isi p {
+	font-style: normal;
+}
+nav.putih {
+	background-color: #FA8C5E;
+}
+nav.putih .tombol-menu .garis{
+	background-color: rgb(255, 255, 255);
+}
+nav .logo img.hitam{
+	display: none;
+}
+
+section.abuabu{
+	background-color: rgb(220, 111, 92);
+}
+.support {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.support h6{
+	margin: 0px;
+	margin-top: 20px;
+	padding: 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+.support img{
+	width: 50px;
+}
+.support div{
+	text-align: center;
+	width: 26%;
+}
+
+/* galery */
+.container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.card {
+	background: rgb(255, 255, 255);
+	width: 270px;
+	margin: 10px;
+	border-radius: 15px;
+}
+.card-image {
+	background-color: #FA8C5E;
+	height: 170px;
+	margin-bottom: 15px;
+	background-size: cover;
+	border-radius: 15px 15px 0 0;
+}
+.car-1 {
+	background-image: url('image/adat1.jpg');
+}
+.car-2{
+	background-image: url('image/adat2.jpg');
+
+}
+.car-3{
+	background-image: url('image/adat5.jpg');
+	
+}
+.car-4{
+	background-image: url('image/adat4.jpg');
+	
+}
+.card h2{
+	padding: 10px;
+	font-family: 'Idap';
+	font-size: 30px;
+	text-align: center;
+}
+.card p{
+	padding: 10px;
+}
+.card a{
+	background-color: black;
+	color: white;
+	padding: 15px 20px;
+	display: block;
+	text-align: center;
+	margin: 20px 50px;
+	text-decoration: none;
+}
+.card:hover {
+	background-color: #e99d7d;
+	color: white;
+	cursor: pointer;
+	transform: scale(1.03);
+	transition: all 1st ease;
+}
+
+
+
+
+
+
+
+.home1 {
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 15px;
+    text-align: center;
+}
+ul{
+	float: center;
+	margin-top: 35px;
+}
+ul li{
+	display: inline-block;
+}
+ul li a{
+	text-decoration: none;
+	color: white;
+	padding: 10px 40px;
+	border-radius: 5px;
+	transition: 0,6s;
+	margin: 10px;
+	font-size: 10px;
+	font-weight: 11px;
+}
+
+
+.footer {
+	padding: 20px 0;
+	background-color: #FA8C5E;
+}
+.footer .social {
+	text-align: center;
+	padding-bottom: 25px;
+	color: rgb(235, 225, 220);
+}
+.footer .social a{
+	font-size: 24px;
+	color: inherit;
+	border: 1px solid rgb(235, 225, 220);
+	width: 40px;
+	height: 40px;
+	line-height: 38px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	margin: 0 8px;
+	opacity: 0.75;
+}
+.footer .social a:hover{
+	opacity: 0.9;
+}
+.footer ul {
+	margin-top: 0;
+	padding: 0;
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 0;
+	text-align: center;
+}
+.footer ul a{
+	color: inherit;
+	text-decoration: none;
+	opacity: 0.8;
+}
+.footer ul li{
+	display: inline-block;
+	padding: 0 15px;
+}
+.footer ul li a:hover {
+	opacity: 4;
+}
+.footer .copyright{
+	margin-top: 10px;
+	text-align: center;
+	font-size: 13px;
+	color: rgb(235, 225, 220);
+}
+
+
+.section{
+	width: 100%;
+	min-height: 10cm;
+	background-color: rgb(255, 255, 255);
+}
+.container2{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top: 10px;
+}
+.content-section{
+	float: left;
+	width: 55%;
+}
+.image-section{
+	float: right;
+	width: 40%;
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+}
+.content-section .title{
+	text-transform: uppercase;
+	font-size: 28px;
+}
+.content-section .title h1{
+	font-family: 'Idap';
+	font-size: 40px;
+}
+.content-section .content h3{
+	margin-top: 20px;
+	color:#FA8C5E;
+	font-size: 21px;
+}
+.content-section .content p{
+	margin-top: 10px;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+.content-section .content .button{
+	margin-top: 30px;
+}
+.content-section .content .button a{
+	background-color: #3d3d3d;
+	padding:12px 40px;
+	text-decoration: none;
+	color:#fff;
+	font-size: 25px;
+	letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+	background-color: #a52a2a;
+	color:#fff;
+}
+@media screen and (max-width: 768px){
+	.container{
+	width: 80%;
+	display: block;
+	margin:auto;
+	padding-top:50px;
+}
+.content-section{
+	float:none;
+	width:100%;
+	display: block;
+	margin:auto;
+}
+.image-section{
+	float:none;
+	width:100%;
+	
+}
+.image-section img{
+	width: 100%;
+	height: auto;
+	display: block;
+	margin:auto;
+}
+.content-section .title{
+	text-align: center;
+	font-size: 19px;
+}
+.content-section .content .button{
+	text-align: center;
+}
+.content-section .content .button a{
+	padding:9px 30px;
+}
+
+}
+/* edit haha */
